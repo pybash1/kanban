@@ -19,13 +19,13 @@ export default function SidebarItem({
         }
       >
         {icon}
-        <span className="absolute w-auto p-2 m-2 min-w-max left-14 rounded-md text-[#533be5] bg-[#f6f5fd] text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100">
+        <span className="absolute w-auto p-2 m-2 min-w-max left-14 rounded-md text-[#533be5] bg-[#f6f5fd] text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100 z-[999]">
           {tooltip}
         </span>
+        {active ? (
+          <span className="absolute -left-[1.6rem] w-[4px] h-[40px] bg-[#533be5] rounded-r-lg"></span>
+        ) : null}
       </div>
-      {active ? (
-        <span className="absolute left-0 w-[4px] h-[40px] bg-[#533be5] rounded-[0_8px_8px_0]"></span>
-      ) : null}
     </>
   );
 }

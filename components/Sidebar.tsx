@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SidebarItem from "./SidebarItem";
 
 export default function Sidebar() {
@@ -23,7 +22,7 @@ export default function Sidebar() {
         }
         tooltip={"Dimension"}
       />
-      <SidebarDivider />
+      <hr className="bg-[#eaedf0] border border-[#eaedf0] rounded-full mx-4" />
       <SidebarItem
         active
         icon={
@@ -40,7 +39,7 @@ export default function Sidebar() {
             />
           </svg>
         }
-        tooltip={"Airbnb"}
+        tooltip={"Appcircle"}
       />
       <SidebarItem
         icon={
@@ -132,11 +131,5 @@ export default function Sidebar() {
         tooltip={"Create Project"}
       />
     </aside>
-  );
-}
-
-export function SidebarDivider() {
-  return (
-    <hr className="bg-[#eaedf0] border border-[#eaedf0] rounded-full mx-4" />
   );
 }
