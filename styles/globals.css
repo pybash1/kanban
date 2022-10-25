@@ -50,3 +50,15 @@ body {
 .bg-\[\#78C552\]\/10 {
   background-color: rgb(120 197 82 / 0.1);
 }
+
+.text-\[\#8478FE\] {
+  background-color: rgb(132 120 254);
+}
+
+.text-\[\#2F6BFE\] {
+  background-color: rgb(47 107 254);
+}
+
+.text-\[\#78C552\] {
+  background-color: rgb(120 197 82);
+}
