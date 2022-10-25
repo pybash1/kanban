@@ -1,3 +1,4 @@
+import Card from "./Card";
 import Column from "./Column";
 
 export default function Kanban() {
@@ -5,7 +6,32 @@ export default function Kanban() {
     <div className="w-full grid grid-cols-3 gap-4 h-full overflow-y-auto column pb-48">
       <Column
         name="Todo"
-        cards={2}
+        cards={[
+          <Card
+            name="UX Adjustments"
+            description="Make UI/UX revisions for the project management dashboard on Figma."
+            code="FLYTE-1"
+            tag="Research"
+            tasks={0}
+            comments={3}
+            links={0}
+            date="Oct 25"
+            color="#8478FE"
+            key="1"
+          />,
+          <Card
+            name="Moodboards"
+            image="https://cdn.discordapp.com/attachments/883044092030890014/1034480458525851648/unknown.png"
+            code="FLYTE-2"
+            tag="UI Design"
+            tasks={0}
+            comments={2}
+            links={2}
+            date="Nov 23"
+            color="#2F6BFE"
+            key="2"
+          />,
+        ]}
         border="#111118"
         icon={
           <svg
@@ -28,7 +54,34 @@ export default function Kanban() {
       />
       <Column
         name="In Progress"
-        cards={8}
+        cards={[
+          <Card
+            name="Dashboard Design"
+            image="https://cdn.discordapp.com/attachments/883044092030890014/1034396856945479721/unknown.png"
+            code="FLYTE-3"
+            tag="UI Design"
+            tasks={4}
+            totalTasks={8}
+            comments={5}
+            links={1}
+            date="Jun 20"
+            color="#2F6BFE"
+            key="1"
+          />,
+          <Card
+            name="Design System"
+            description="Create a consistent look and feel both on web and mobile"
+            code="FLYTE-4"
+            tag="UI Design"
+            tasks={4}
+            totalTasks={8}
+            comments={12}
+            links={0}
+            date="May 20"
+            color="#2F6BFE"
+            key="2"
+          />,
+        ]}
         border="#4734FE"
         icon={
           <svg
@@ -55,7 +108,33 @@ export default function Kanban() {
       />
       <Column
         name="Done"
-        cards={2}
+        cards={[
+          <Card
+            done
+            name="Presentation"
+            description="Help business to clearly define their anuual e-commerce digital strategy by creating a high-level plan."
+            code="FLYTE-5"
+            tag="Planning"
+            tasks={0}
+            comments={11}
+            links={0}
+            date=""
+            color="#78C552"
+            key="1"
+          />,
+          <Card
+            done
+            name="Brainstorming"
+            code="FLYTE-6"
+            tag="Research"
+            tasks={0}
+            comments={12}
+            links={0}
+            date=""
+            color="#8478FE"
+            key="2"
+          />,
+        ]}
         border="#78C552"
         icon={
           <svg

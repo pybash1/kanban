@@ -9,7 +9,7 @@ export default function Column({
   border,
 }: {
   name: string;
-  cards: number;
+  cards: ReactNode[];
   icon: ReactNode;
   border: string;
 }) {
@@ -23,7 +23,7 @@ export default function Column({
           {icon}
           <h3 className="uppercase font-bold text-lg">{name}</h3>
           <div className="border border-[#EAEDF0] bg-[#F7F9FA] px-2.5 py-0.2 rounded-lg">
-            {cards}
+            {cards.length}
           </div>
         </div>
         <div className="flex fex-row items-center gap-3">
@@ -58,9 +58,7 @@ export default function Column({
         </div>
       </div>
       <div className="flex flex-col pt-8 gap-4">
-        <Card />
-        <Card />
-        <Card />
+        {cards}
         <AddCard />
       </div>
     </div>
