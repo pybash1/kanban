@@ -9,11 +9,9 @@ export default function Card() {
         Dashboard Design
       </div>
       <div className="px-4">
-        <Image
+        <img
           src="https://cdn.discordapp.com/attachments/883044092030890014/1034396856945479721/unknown.png"
           alt="image"
-          width="300%"
-          height="150%"
         />
       </div>
       <div className="pt-3 px-4 flex flex-row justify-between">
