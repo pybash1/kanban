@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import AddCard from "./AddCard";
 import Card from "./Card";
 
 export default function Column({
@@ -60,6 +61,7 @@ export default function Column({
         <Card />
         <Card />
         <Card />
+        <AddCard />
       </div>
     </div>
   );
