@@ -25,3 +25,16 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+@layer utilities {
+  @variants responsive {
+    .column::-webkit-scrollbar {
+        display: none;
+    }
+
+    .column {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  }
+}
