@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProjectSidebar() {
   return (
-    <aside className="border-r border-[#eaedf0] absolute h-screen w-72 top-0 left-24 -z-50">
+    <aside className="border-r border-[#eaedf0] absolute h-screen w-72 top-0 left-24 -z-50 overflow-hidden">
       <h2 className="text-[#292938] text-xl font-bold px-3 py-[22px] border-b border-[#eaedf0]">
         Project Name
       </h2>

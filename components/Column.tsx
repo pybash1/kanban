@@ -56,7 +56,7 @@ export default function Column({
           </svg>
         </div>
       </div>
-      <div className="flex flex-col pt-8 gap-4 h-[33rem] overflow-y-auto column">
+      <div className="flex flex-col pt-8 gap-4">
         <Card />
         <Card />
         <Card />

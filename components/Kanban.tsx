@@ -2,7 +2,7 @@ import Column from "./Column";
 
 export default function Kanban() {
   return (
-    <div className="w-full grid grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-3 gap-4 h-full overflow-y-auto column pb-48">
       <Column
         name="Todo"
         cards={2}
