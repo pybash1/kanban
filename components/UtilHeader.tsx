@@ -3,7 +3,7 @@ import ThreeDButton from "./ThreeDButton";
 
 export default function Header() {
   return (
-    <div className="border-b border-[#] py-[0.9rem] px-[1.6rem] flex flex-row justify-between">
+    <div className="border-b border-[#] py-[0.9rem] px-[1.6rem] flex flex-row justify-between h-16">
       <div className="flex flex-row items-center gap-2">
         <ThreeDButton
           icon={
