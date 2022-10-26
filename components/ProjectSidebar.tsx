@@ -35,11 +35,13 @@ export default function ProjectSidebar() {
         </div>
         <div className="font-normal text-[#7F8995]">40%</div>
       </div>
-      <div className=" bg-gray-200 rounded-full h-3 mx-6">
+      <div className=" bg-gray-200 rounded-full h-3 mx-6 flex flex-row items-center">
         <div
           className="bg-[url('/progress.png')] h-3 rounded-full"
           style={{ width: "40%" }}
-        ></div>
+        >
+        </div>
+        <div className="rounded-full border border-[#EAEDF0] bg-[#ffffff] -translate-x-2 p-0.5">🎉</div>
       </div>
       <ul className="text-[#6c6f75] py-6 px-8">
         <li className="py-2 flex flex-row justify-between">
