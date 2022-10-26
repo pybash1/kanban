@@ -1,17 +1,34 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import AddCard from "./AddCard";
 import Card from "./Card";
+
+interface Props {
+    name: string;
+    description?: string;
+    image?: string;
+    done?: boolean;
+    tasks: number;
+    comments: number;
+    links: number;
+    totalTasks?: number;
+    code: string;
+    tag: string;
+    date: string;
+    color: string
+}
 
 export default function Column({
   name,
   cards,
   icon,
   border,
+  onClick,
 }: {
   name: string;
-  cards: ReactNode[];
+  cards: Props[];
   icon: ReactNode;
   border: string;
+  onClick: () => any;
 }) {
   return (
     <div className="px-6 pt-8 pb-6">
@@ -58,8 +75,10 @@ export default function Column({
         </div>
       </div>
       <div className="flex flex-col pt-8 gap-4">
-        {cards}
-        <AddCard />
+        {cards.map((card, ind) => (
+            <Card name={card.name} description={card.description} image={card.image} code={card.code} tag={card.tag} color={card.color} tasks={card.tasks} links={card.links} comments={card.comments} totalTasks={card.totalTasks} date={card.date} done={card.done} key={ind} />
+        ))}
+        <AddCard onClick={onClick} />
       </div>
     </div>
   );

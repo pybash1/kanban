@@ -1,6 +1,6 @@
-export default function AddCard() {
+export default function AddCard({ onClick }: { onClick: () => any }) {
   return (
-    <button className="border border-[#EAEDF0] p-2 font-bold flex flex-row items-center justify-center rounded-lg text-[#4734FE]">
+    <button onClick={onClick} className="border border-[#EAEDF0] p-2 font-bold flex flex-row items-center justify-center rounded-lg text-[#4734FE]">
       <svg
         width="24"
         height="24"
