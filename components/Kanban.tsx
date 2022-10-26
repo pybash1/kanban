@@ -90,6 +90,14 @@ export default function Kanban() {
     },
   ]);
 
+  const getLastId = () => {
+    let lastTodo = parseInt(todo[todo.length-1].code.split("-")[1]);
+    let lastDoing = parseInt(doing[doing.length-1].code.split("-")[1]);
+    let lastDone = parseInt(done[done.length-1].code.split("-")[1]);
+
+    return Math.max(lastTodo, lastDoing, lastDone);
+  }
+
   return (
     <div className="w-full grid grid-cols-3 gap-4 h-full overflow-y-auto column pb-48">
       <Column
@@ -98,7 +106,7 @@ export default function Kanban() {
             todo.concat([{
               name: "Lorem Ipsum",
               description: "Lorem ipsum dolor sit amet tempor magna",
-              code: "FLYTE-7",
+              code: "FLYTE-"+(getLastId()+1).toString(),
               tag: "UI Design",
               tasks: 69,
               totalTasks: 420,
@@ -106,7 +114,7 @@ export default function Kanban() {
               links: 3,
               done: false,
               date: "Oct 26",
-              color: "#8478FE",
+              color: "#2F6BFE",
             }])
           );
         }}
@@ -138,7 +146,7 @@ export default function Kanban() {
             doing.concat([{
               name: "Lorem Ipsum",
               description: "Lorem ipsum dolor sit amet tempor magna",
-              code: "FLYTE-7",
+              code: "FLYTE-"+(getLastId()+1).toString(),
               tag: "UI Design",
               tasks: 69,
               totalTasks: 420,
@@ -146,7 +154,7 @@ export default function Kanban() {
               links: 3,
               done: false,
               date: "Oct 26",
-              color: "#8478FE",
+              color: "#2F6BFE",
             }])
           );
         }}
@@ -181,15 +189,15 @@ export default function Kanban() {
           setDone(done.concat([{
             name: "Lorem Ipsum",
             description: "Lorem ipsum dolor sit amet tempor magna",
-            code: "FLYTE-7",
+            code: "FLYTE-"+(getLastId()+1).toString(),
             tag: "UI Design",
             tasks: 69,
             totalTasks: 420,
             comments: 12,
             links: 3,
-            done: false,
-            date: "Oct 26",
-            color: "#8478FE",
+            done: true,
+            date: "",
+            color: "#2F6BFE",
           }]));
         }}
         name="Done"
