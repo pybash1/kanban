@@ -1,4 +1,5 @@
 import AvatarGroup from "./AvatarGroup";
+import { useDraggable } from "@dnd-kit/core";
 
 export default function Card({
   name,
@@ -27,15 +28,23 @@ export default function Card({
   done?: boolean;
   color: string;
 }) {
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: code,
+  });
+
+  const style = transform ? {
+    transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+  } : undefined;
+
   return (
-    <div className="border border-[#EAEDF0] rounded-lg">
+    <div className="border border-[#EAEDF0] rounded-lg bg-white" style={style} ref={setNodeRef} {...listeners} {...attributes}>
       <div className="text-[#7F8995] text-sm px-4 pt-4">{code}</div>
       <div className="text-[#111118] text-xl font-bold pt-2 pb-3 px-4">
         {name}
       </div>
       <div className="px-4 text-[#7F8995]">
         {description || null}
-        {image ? (<img src={image} alt="image" />) : null}
+        {image ? <img src={image} alt="image" /> : null}
       </div>
       <div className="pt-3 px-4 flex flex-row justify-between">
         <div
