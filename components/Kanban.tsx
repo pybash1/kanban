@@ -162,6 +162,7 @@ export default function Kanban() {
     <DndContext onDragEnd={handleDragEnd}>
       <div className="w-full grid grid-cols-3 gap-4 h-full overflow-y-auto column pb-48">
         <div className="flex flex-col">
+          {/* @ts-ignore */}
           <SortableContext items={todo}>
             <Column
               name="Todo"
@@ -210,6 +211,7 @@ export default function Kanban() {
           />
         </div>
         <div className="flex flex-col">
+          {/* @ts-ignore */}
           <SortableContext items={doing}>
             <Column
               name="In Progress"
@@ -262,6 +264,7 @@ export default function Kanban() {
           />
         </div>
         <div className="flex flex-col">
+          {/* @ts-ignore */}
           <SortableContext items={done}>
             <Column
               name="Done"
